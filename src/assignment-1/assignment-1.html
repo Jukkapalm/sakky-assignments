@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Task</title>
+    </head>
+    <body>
+        
+        <h1>JavaScript Class: Car</h1>
+        <p>Open te browser console to see results (Press F12)</p>
+
+        <script>
+
+            // Car Class and properties brand and model
+            class Car {
+                constructor() {
+                    this.brand = "";
+                    this.model = "";
+                }
+            }
+
+            // Create object from the class
+            const myCar = new Car();
+
+            // Give the object a brand and a model
+            myCar.brand = "Toyota";
+            myCar.model = "Corolla";
+
+            console.log("Car brand:", myCar.brand);
+            console.log("Car model:", myCar.model);
+
+        </script>
+
+    </body>
+</html>
