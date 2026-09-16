@@ -7,8 +7,10 @@
     </head>
     <body>
         
-        <h1>JavaScript Class: Car</h1>
-        <p>Open te browser console to see results (Press F12)</p>
+        <h1>Car Details</h1>
+
+        <!-- Print the car details to the screen -->
+        <div id="car-info"></div>
 
         <script>
 
@@ -27,8 +29,15 @@
             myCar.brand = "Toyota";
             myCar.model = "Corolla";
 
-            console.log("Car brand:", myCar.brand);
-            console.log("Car model:", myCar.model);
+            // Get the object's property values and print them to the screen 
+            const carInfo = document.getElementById("car-info");
+
+            carInfo.innerHTML = `
+                <p>Brand: ${myCar.brand}</p>
+                <p>Model: ${myCar.model}</p>
+            `;
+
+
 
         </script>
 
