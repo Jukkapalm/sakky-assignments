@@ -14,9 +14,43 @@
 
         <script>
 
-            class student {
-                
+            // Student class and properties name and group
+            class Student {
+                constructor(name, group) {
+                    this.name = name;
+                    this.group = group;
+                }
+
+                // Introduction text
+                introduction() {
+                    return `Hi, my name is ${this.name} and i belong to the group ${this.group}.`;
+                }
             }
+
+            // Creating two objects, both have own set of values
+            const student1 = new Student("Matti Meikäläinen", "Software development");
+            const student2 = new Student("Teppo Teikäläinen", "Software development");
+
+            // Displaying the values in the console
+            console.log(student1.name, student1.group);
+            console.log(student2.name, student2.group);
+
+            const results = document.getElementById("students");
+
+            // Printing results in the browser
+            results.innerHTML = `
+                <h2>Object 1</h2>
+                <p><strong>Name:</strong> ${student1.name}</p>
+                <p><strong>Group:</strong> ${student1.group}</p>
+                <p>${student1.introduction()}</p>
+            `;
+
+            results.innerHTML += `
+                <h2>Object 2</h2>
+                <p><strong>Name:</strong> ${student2.name}</p>
+                <p><strong>Group:</strong> ${student2.group}</p>
+                <p>${student2.introduction()}</p>
+            `;
 
         </script>
 
