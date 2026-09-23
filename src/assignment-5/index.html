@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saving the Book's Information</title>
+    </head>
+    <body>
+        
+        <h1>Saving the Book's Information</h1>
+
+        <div id="book-info"></div>
+
+        <script>
+
+            class Book {
+                constructor(bookname, writer, pages) {
+                    this.bookname = bookname;
+                    this.writer = writer;
+                    this.pages = pages;
+                }
+
+                bookInformation() {
+                    return `Book name is ${this.bookname}, Book writer is ${this.writer}, The Book has ${this.pages} pages`;
+                }
+            }
+
+            const myBook = new Book("Lord of The Rings", "J.R.R. Tolkien", "1000");
+
+            console.log(myBook.bookname);
+            console.log(myBook.writer);
+            console.log(myBook.pages);
+
+            const result = document.getElementById("book-info");
+
+            result.innerHTML = `
+                <p>${myBook.bookInformation()}</p>
+            `;
+
+        </script>
+
+    </body>
+</html>
