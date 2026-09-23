@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lamp Status</title>
+    </head>
+
+    <body>
+        
+        <h1>Lamp Status</h1>
+
+        <!-- Toggle button to change lamp status -->
+        <button id="lamp-button">Toggle Lamp ON / OFF</button>
+        <div id="lamp-status">
+            <p>Lamp Status: OFF</p>
+        </div>
+
+        <script>
+
+            // Lamp class with status management
+            class Lamp {
+                constructor() {
+                    this.status = "OFF";
+                }
+
+                // Methods to change state to ON or OFF
+                turnOn() {
+                    this.status = "ON";
+                }
+
+                turnOff() {
+                    this.status = "OFF";
+                }
+            }
+
+            // Lamp Object
+            const lamp = new Lamp();
+            const lampButton = document.getElementById("lamp-button");
+            const lampStatus = document.getElementById("lamp-status");
+
+
+            // Event listener, check current state is lamp turned on or off
+            lampButton.addEventListener("click", () => {
+                if (lamp.status === "OFF") {
+                    lampStatus.innerHTML += `<p>Lamp turning on...</p>`;
+                    lamp.turnOn();
+                }
+                else if (lamp.status === "ON") {
+                    lampStatus.innerHTML += `<p>Lamp turning off...</p>`;
+                    lamp.turnOff();
+                }
+
+                // Append updated state to log
+                lampStatus.innerHTML += `<p>Lamp status: ${lamp.status}`;
+            });
+
+
+        </script>
+
+    </body>
+</html>
