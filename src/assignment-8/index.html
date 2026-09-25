@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Details and Grade</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Student Details and Grade</h1>
+
+        <form action="">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+
+            <br>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age">
+
+            <br>
+
+            <label for="course">Course:</label>
+            <input type="text" id="course">
+
+            <br>
+
+            <label for="grade">Grade:</label>
+            <input type="number" id="grade">
+
+            <br>
+
+            <button type="button" onclick="addStudent()">Add</button>
+            <input type="reset" value="Reset">
+        </form>
+
+        <h1>Studentlist</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="studentList">
+                <!-- Row 1 -->
+                <!-- Row 2 -->
+                <!-- Row 3 -->
+            </tbody>
+        </table>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
